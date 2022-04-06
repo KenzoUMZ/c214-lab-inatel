@@ -6,7 +6,7 @@ test('Status Code OK - Case undefined', () => {
     expect(result).toEqual(200);
 });
 
-test('Status Code OK - Case undefined', () => {
+test('Status Code OK - Case validation error', () => {
     const result = Utils.responseStatus(Constants.ErrorValidation.name);
     expect(result).toEqual(400);
 });
