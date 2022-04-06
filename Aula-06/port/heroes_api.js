@@ -24,7 +24,7 @@ module.exports = (app) => {
         res.status(Utils.responseStatus(response.name));
         res.json(response);
     });
-    app.patch(`${route}/listUser`, async (req, res) => {
+    app.patch(`${route}/listHero`, async (req, res) => {
         const response = await Heroes.listByEmail(req.body);
         res.status(Utils.responseStatus(response.name));
         res.json(response);

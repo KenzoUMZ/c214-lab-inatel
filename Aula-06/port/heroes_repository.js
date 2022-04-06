@@ -44,7 +44,7 @@ const HeroesRepository = {
         }
     },
 
-    async getByName(data) {
+    async getByEmail(data) {
         try {
             const result = await HeroesModel.findOne({ nome: data.nome }).exec();
             return result;

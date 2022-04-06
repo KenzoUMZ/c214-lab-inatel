@@ -15,6 +15,10 @@ const HeroesSchema = new Schema({
         index: true,
         unique: true,
     },
+    email: {
+        type: String,
+        unique: true,
+    },
     nome: String,
     senha: String,
     poder: String,

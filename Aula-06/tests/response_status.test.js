@@ -6,8 +6,19 @@ test('Status Code OK - Case undefined', () => {
     expect(result).toEqual(200);
 });
 
-test('Status Code OK - Case validation error', () => {
+test('Status Bad request - Case validation error', () => {
     const result = Utils.responseStatus(Constants.ErrorValidation.name);
     expect(result).toEqual(400);
 });
+
+test('Status Not found - Case not found error', () => {
+    const result = Utils.responseStatus(Constants.ErrorNotFound.name);
+    expect(result).toEqual(404);
+});
+
+test('Status Not found - Case not found error', () => {
+    const result = Utils.responseStatus(Constants.ErrorDuplicate.name);
+    expect(result).toEqual(11000);
+});
+
 

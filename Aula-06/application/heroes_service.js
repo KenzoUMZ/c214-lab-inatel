@@ -4,15 +4,15 @@ const Utils = require('../utils/utils');
 const Constants = require('../utils/constants');
 const HeroesRepository = require('../port/heroes_repository');
 const Constraints = require('../utils/heroes_validation');
+const Validation = require('../utils/validation');
 
 const Heroes = {
     async create(data) {
         try {
-            const validation = validate.validate(data, Constraints.create);
+            const validation = Validation.create(data);
             if (validation) {
-                const response = Constants.ErrorValidation;
-                response.message = validation;
-                return response;
+
+                return validation;
             }
 
             data.id = Utils.generateUuid();
