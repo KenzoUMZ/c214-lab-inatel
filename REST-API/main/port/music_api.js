@@ -1,5 +1,5 @@
 const Music = require('../application/music_service');
-const Utils = require('../utils/utils');
+const Utils = require('../utils/status-code');
 
 const route = '/music';
 

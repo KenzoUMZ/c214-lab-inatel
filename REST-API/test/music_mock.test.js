@@ -1,9 +1,9 @@
-const Users = require('../src/application/music_service');
-const Constants = require('../src/utils/Constants');
-const Utils = require('../src/utils/utils');
-const UsersRepository = require('../src/port/music_repository');
+const Users = require('../main/application/music_service');
+const Constants = require('../main/utils/Constants');
+const Utils = require('../main/utils/utils');
+const UsersRepository = require('../main/port/music_repository');
 
-jest.mock('../src/port/music_repository');
+jest.mock('../main/port/music_repository');
 
 test('CREATE - Dado válido', async () => {
     const data = {

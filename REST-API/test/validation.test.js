@@ -1,5 +1,5 @@
-const Constants = require('../src/utils/Constants');
-const Validation = require('../src/utils/validation');
+const Constants = require('../main/utils/Constants');
+const Validation = require('../main/utils/validation');
 
 test('Caso válido', () => {
     const result = Validation.create({
